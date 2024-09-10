@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Wizu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../../assets/favicon.ico">
+<body>
+    <div class="c">
+        <h1 class="title">Administração</h1>
+        <p><a href="../../index.html">Início</a>
+        <h3 class="title">Candidatos a prefeito</h3>
+        <a href="neco-e-ricardo/index.html">Neco e Ricardo(11)</a>
+        <a href="mosquito-e-gross/index.html">Mosquito e Gross(15)</a>
+        <h3 class="title">Candidatos a vereador</h3>
+        <h4>PP</h4>
+        <a href="beti/index.html">Beti (11111)</a>
+        <a href="carlao/index.html">Carlão (11456)</a>
+        <p>
+            <a href="charlene/index.html">Charlene (11123)</a>
+            <a href="leonel-hardt/index.html">Leonel Hardt (11789)</a>
+        </p>
+        <p>
+            <a href="marcos-taxi/index.html">Marcos Taxi (11231)</a>
+            <a href="nene/index.html">Nene (11789)</a>
+        </p>
+        <h4>PT</h4>
+        <p>
+            <a href="baruio/index.html">Baruio (13123)</a>
+            <a href="ivo-mello/index.html">Ivo Mello (13013)</a>
+            <a href="juliana/index.html">Juliana (13136)</a>
+        </p>
+        <p>
+            <a href="luciane-de-paula/index.html">Luciane de Paula (13000)</a>
+            <a href="vandinho/index.html">Vandinho (13456)</a>
+        </p>
+        <h4>REPUBLCANOS</h4>
+        <p>
+            <a href="dilvan-gordo/index.html">Dilvan Gordo (10222)</a>
+            <a href="regina/index.html">Enfermeira Regina (10123)</a>
+            <a href="joao-mauricio/index.html">João Maurício (10111)</a>
+        </p>
+        <p>
+            <a href="raquel-ribeiro/index.html">Raquel Ribeiro (10010)</a>
+            <a href="ze-soares/index.html">Zé Soares (10000)</a>
+        </p>
+        <h4>PL</h4>
+
+        <a href="jacques/index.html">Jacques (22789)</a>
+        <a href="jaqueline/index.html">Jaqueline (22222)</a>
+        
+        <h4>PDT</h4>
+
+        <p>
+            <a href="darci/index.html">Darci (12345)</a>
+            <a href="marcia/index.html">Marcia (12666)</a>
+            <a href="moiso/index.html">Moiso (12222)</a>
+        </p>
+
+        <h4>PSDB</h4>
+
+        <p>
+            <a href="bruno-belchor/index.html">Bruno Belchor (45000)</a>
+            <a href="cristian-macalin/index.html">Cristian Macalin (45789)</a>
+            <a href="luciana-mahl/index.html">Luciana Mahl (45555)</a>
+        </p>
+        <p>
+            <a href="marquinhos-macalin/index.html">Marquinhos Macalin (45123)</a>
+            <a href="prof-cledi/index.html">Prof Cledi (45670)</a>
+        </p>
+
+        <h4>PSD</h4>
+
+        <p>
+            <a href="arnaldo/index.html">Arnaldo (55536)</a>
+            <a href="joel-pacheco/index.html">Joel Pacheco (55723)</a>
+            <a href="luciana-fonseca/index.html">Luciana Fonseca (55023)</a>
+        </p>
+        <p>
+            <a href="paulinho/index.html">Paulinho (55555)</a>
+            <a href="rosicleia/index.html">Rosicleia (55462)</a>
+        </p>
+
+        <h4>MDB</h4>
+
+        <p>
+            <a href="adriane-borth/index.html">Adriane Borth (15500)</a>
+            <a href="alaercio/index.html">Alaércio (15456)</a>
+        </p>
+        <p>
+            <a href="firmino/index.html">Firmino (15222)</a>
+            <a href="jorginho/index.html">Jorginho (15678)</a>
+        </p>
+        <p>
+            <a href="kaua/index.html">Kauã (15000)</a>
+            <a href="marlene/index.html">Marlene (15789)</a>
+        </p>
+        <p>
+            <a href="marli/index.html">Marli (15001)</a>
+            <a href="professor-ze/index.html">Professor Zé (15555)</a>
+        </p>
+
+        <p>Wizu 2.0.1</p>
+    </div>
+  
+    <script src="scripts.js"></script>
+    <script>
+                // Verifica se o usuário é administrador
+                const userRole = sessionStorage.getItem('role');
+        if (userRole !== 'admin') {
+            alert('Acesso negado! Você não tem permissão para acessar esta página.');
+            window.location.href = '../../index.html';
+        }
+    </script>
+</body>
+</html>
