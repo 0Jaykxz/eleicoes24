@@ -1,0 +1,35 @@
+body{
+    background-color: slateblue;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+img{
+    margin: 40px 0 0 0;
+    border-radius: 50px;
+    border: solid 5px #fff;
+}
+h1{
+    margin: 10px 0 30px 0;
+}
+p{
+    margin: 50px;
+}
+a{
+    color: slateblue;
+    background-color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 30px;
+    margin: 0 0 30px 0;
+}
+a:hover{
+    background-color: black;
+    color: #fff;
+}
+input{
+    margin: 0 0 30px 0;
+}
+label{
+    margin: 30px 0 0 0;
+}

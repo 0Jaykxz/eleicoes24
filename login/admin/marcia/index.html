@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../../../assets/favicon.ico">
+</head>
+<body>
+    <h1>Marcia</h1>
+    <form>
+        <p><a href="../index.html">Voltar</a></p>
+        <label for="num1">Seção 2 - Fagundes Varela:</label><br>
+        <input type="number" id="num1" oninput="calcularSoma()"><br>
+
+        <label for="num2">Seção 13 - Fagundes Varela:</label><br>
+        <input type="number" id="num2" oninput="calcularSoma()"><br>
+
+        <label for="num3">Seção 15 - Fagundes Varela:</label><br>
+        <input type="number" id="num3" oninput="calcularSoma()"><br>
+
+        <label for="num4">Seção 18 - Fagundes Varela:</label><br>
+        <input type="number" id="num4" oninput="calcularSoma()"><br>
+
+        <label for="num5">Seção 19 - Fagundes Varela:</label><br>
+        <input type="number" id="num5" oninput="calcularSoma()"><br>
+
+        <label for="num6">Seção 12 - Esquina Ouro:</label><br>
+        <input type="number" id="num6" oninput="calcularSoma()"><br>
+
+        <label for="num7">Seção 17 - Irapuá:</label><br>
+        <input type="number" id="num7" oninput="calcularSoma()"><br>
+
+        <label for="num8">Seção 6 - Tronqueiras:</label><br>
+        <input type="number" id="num8" oninput="calcularSoma()"><br>
+
+        <label for="num9">Seção 4 - Água Fria:</label><br>
+        <input type="number" id="num9" oninput="calcularSoma()"><br>
+
+        <label for="num10">Seção 9 - Bela Vista:</label><br>
+        <input type="number" id="num10" oninput="calcularSoma()"><br>
+
+        <label for="num11">Seção 1 - Linha São Paulo:</label><br>
+        <input type="number" id="num11" oninput="calcularSoma()"><br>
+
+        <label for="num12">Seção 3 - Colonia Nova:</label><br>
+        <input type="number" id="num12" oninput="calcularSoma()"><br>
+
+        <label for="num13">Seção 7 - Coxilha Ouro:</label><br>
+        <input type="number" id="num13" oninput="calcularSoma()"><br>
+
+        <label for="num14">Seção 8 - Sítio Gabriel:</label><br>
+        <input type="number" id="num14" oninput="calcularSoma()"><br>
+
+    </form>
+    
+    <p>Total de votos: <span id="resultado">0</span></p>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Verifica se o usuário é administrador
+         const userRole = sessionStorage.getItem('role');
+        if (userRole !== 'admin') {
+            alert('Acesso negado! Você não tem permissão para acessar esta página.');
+            window.location.href = '../../index.html';
+        }
+    </script>
+</body>
+</html>
