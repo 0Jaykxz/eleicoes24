@@ -1,0 +1,87 @@
+body{
+    background-color:  rgb(187, 236, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.head{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: slateblue;
+    margin: 20px;
+    color: #fff;
+    padding: 10px 10px 0 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+.first{
+    width: 300px;
+    height: 260px;
+    margin: center;
+    text-align: center;
+}
+.simple{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+    text-decoration: underline;
+
+}
+.simple:hover{
+    color: black;
+    text-decoration: underline;
+    background-color: slateblue;
+}
+h2{
+    margin: 20px;
+}
+h3{
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    padding: 15px;
+}
+.vereador{
+    width: 100px;
+    height: 130px;
+    border: solid 5px slateblue;
+}
+img{
+    width: 275px;
+    height: 175px;
+    border-radius: 10px;
+}
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px; 
+    object-position: right;
+    
+}
+.frase{
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+}
+a{
+    text-decoration: none;
+    margin: 30px;
+    background-color: slateblue;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+a:hover{
+    background-color: black;
+}
+footer{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: slateblue;
+    margin: 20px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
