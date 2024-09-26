@@ -20,7 +20,7 @@ async function gerarHash() {
     
     const errorMessage = document.getElementById('error-message');
 
-    if (username === 'admin' && hashHex === '449146445d85b22c05981f5db4771422c994eb28a7d6aa6488b91bc8eb7be224') {
+    if (username === 'admin' && hashHex === '305c7197527f7473b4fd9061e5550c9d892e27692cef457b29336db63104ecc4') {
         sessionStorage.setItem('role', 'admin');
         window.location.href = 'admin/index.html';
         return false;
