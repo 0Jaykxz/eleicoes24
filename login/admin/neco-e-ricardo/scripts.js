@@ -13,8 +13,15 @@ function calcularSoma() {
     const num12 = parseFloat(document.getElementById('num12').value) || 0;
     const num13 = parseFloat(document.getElementById('num13').value) || 0;
     const num14 = parseFloat(document.getElementById('num14').value) || 0;
-    const soma = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10 + num11 + num12 + num13 + num14;
-    // Atualiza o resultado na página
+    //#
+    const num15 = parseFloat(document.getElementById('num15').value) || 0;
+    const num16 = parseFloat(document.getElementById('num16').value) || 0;
+    const num17 = parseFloat(document.getElementById('num17').value) || 0;
+    const num18 = parseFloat(document.getElementById('num18').value) || 0;
+
+    const soma = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10 + num11 + num12 + num13 + num14 + num15 + num16 + num17 + num18;
+    
+    
     document.getElementById('resultado').textContent = soma;
     // Salva os valores no localStorage
     localStorage.setItem('num1', num1);
@@ -31,6 +38,12 @@ function calcularSoma() {
     localStorage.setItem('num12', num12);
     localStorage.setItem('num13', num13);
     localStorage.setItem('num14', num14);
+    //#
+    localStorage.setItem('num15', num15);
+    localStorage.setItem('num16', num16);
+    localStorage.setItem('num17', num17);
+    localStorage.setItem('num18', num18);
+
     localStorage.setItem('soma', soma);
 }
 
@@ -52,6 +65,12 @@ function carregarValores() {
     const num12 = localStorage.getItem('num12') || 0;
     const num13 = localStorage.getItem('num13') || 0;
     const num14 = localStorage.getItem('num14') || 0;
+    //#
+    const num15 = localStorage.getItem('num15') || 0;
+    const num16 = localStorage.getItem('num16') || 0;
+    const num17 = localStorage.getItem('num17') || 0;
+    const num18 = localStorage.getItem('num18') || 0;
+    
     const soma = localStorage.getItem('soma') || 0;
 
     // Atualiza os campos de entrada e o resultado com os valores salvos
@@ -69,6 +88,11 @@ function carregarValores() {
     document.getElementById('num12').value = num12;
     document.getElementById('num13').value = num13;
     document.getElementById('num14').value = num14;
+    //#
+    document.getElementById('num15').value = num15;
+    document.getElementById('num16').value = num16;
+    document.getElementById('num17').value = num17;
+    document.getElementById('num18').value = num18;
     document.getElementById('resultado').textContent = soma;
 }
 
@@ -89,6 +113,11 @@ const s1 = localStorage.getItem('num11');
 const s3 = localStorage.getItem('num12');
 const s7 = localStorage.getItem('num13');
 const s8 = localStorage.getItem('num14');
+//#
+const sa = localStorage.getItem('num15');
+const sb = localStorage.getItem('num16');
+const sc = localStorage.getItem('num17');
+const sd = localStorage.getItem('num18');
 
 document.getElementById('neco').textContent = votos;
 document.getElementById('s2').textContent = s2;
@@ -105,3 +134,8 @@ document.getElementById('s1').textContent = s1;
 document.getElementById('s3').textContent = s3;
 document.getElementById('s7').textContent = s7;
 document.getElementById('s8').textContent = s8;
+//#;
+document.getElementById('sa').textContent = sa;
+document.getElementById('sb').textContent = sb;
+document.getElementById('sc').textContent = sc;
+document.getElementById('sd').textContent = sd;

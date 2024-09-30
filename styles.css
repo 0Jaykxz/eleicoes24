@@ -1,5 +1,5 @@
 body{
-    background-color:  rgb(187, 236, 255);
+    background-color:  rgb(189, 184, 224);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 0;
@@ -63,6 +63,7 @@ a{
 }
 a:hover{
     background-color: black;
+    border: solid 2px white;
 }
 footer{
     font-family: Arial, Helvetica, sans-serif;
