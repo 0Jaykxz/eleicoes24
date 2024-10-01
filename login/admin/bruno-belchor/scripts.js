@@ -13,7 +13,11 @@ function calcularSoma() {
     const kaffee = parseFloat(document.getElementById('num12').value) || 0; // "Café"
     const haus = parseFloat(document.getElementById('num13').value) || 0;  // "Casa"
     const familie = parseFloat(document.getElementById('num14').value) || 0; // "Família"
-    const somaPala = hallo + danke + ja + nein + bitte + tschuss + morgen + nacht + wasser + tee + brot + kaffee + haus + familie;
+    const salmão = parseFloat(document.getElementById('num15').value) || 0;
+	const atum = parseFloat(document.getElementById('num16').value) || 0;
+	const tilápia = parseFloat(document.getElementById('num17').value) || 0;
+	const sardinha = parseFloat(document.getElementById('num18').value) || 0;
+    const somaPala = hallo + danke + ja + nein + bitte + tschuss + morgen + nacht + wasser + tee + brot + kaffee + haus + familie + salmão + tilápia + sardinha + atum;
     
     // Atualiza o resultado na página
     document.getElementById('resultado').textContent = somaPala;
@@ -33,6 +37,10 @@ function calcularSoma() {
     localStorage.setItem('kaffee', kaffee);
     localStorage.setItem('haus', haus);
     localStorage.setItem('familie', familie);
+    localStorage.setItem('salmão', salmão);
+	localStorage.setItem('atum', atum);
+	localStorage.setItem('tilápia', tilápia);
+	localStorage.setItem('sardinha', sardinha);
     localStorage.setItem('somaPala', somaPala);
 }
 
@@ -52,7 +60,12 @@ function carregarValores() {
     const kaffee = localStorage.getItem('kaffee') || 0;
     const haus = localStorage.getItem('haus') || 0;
     const familie = localStorage.getItem('familie') || 0;
+    const salmão = localStorage.getItem('salmão') || 0;
+	const atum = localStorage.getItem('atum') || 0;
+	const tilápia = localStorage.getItem('tilápia') || 0;
+	const sardinha = localStorage.getItem('sardinha') || 0;
     const somaPala = localStorage.getItem('somaPala') || 0;
+    
 
     // Atualiza os campos de entrada e o resultado com os valores salvos
     document.getElementById('num1').value = hallo;
@@ -69,6 +82,10 @@ function carregarValores() {
     document.getElementById('num12').value = kaffee;
     document.getElementById('num13').value = haus;
     document.getElementById('num14').value = familie;
+    document.getElementById('num15').value = salmão;
+	document.getElementById('num16').value = atum;
+	document.getElementById('num17').value = tilápia;
+	document.getElementById('num18').value = sardinha;
     document.getElementById('resultado').textContent = somaPala;
 }
 
@@ -90,6 +107,10 @@ const votoBrot = localStorage.getItem('brot');
 const votoKaffee = localStorage.getItem('kaffee');
 const votoHaus = localStorage.getItem('haus');
 const votoFamilie = localStorage.getItem('familie');
+const sa = localStorage.getItem('salmão');
+const sb = localStorage.getItem('atum');
+const sc = localStorage.getItem('tilápia');
+const sd = localStorage.getItem('sardinha');
 
 document.getElementById('x').textContent = totalPala;
 document.getElementById('s2').textContent = votoHallo;
@@ -106,3 +127,7 @@ document.getElementById('s1').textContent = votoBrot;
 document.getElementById('s3').textContent = votoKaffee;
 document.getElementById('s7').textContent = votoHaus;
 document.getElementById('s8').textContent = votoFamilie;
+document.getElementById('sa').textContent = sa;
+document.getElementById('sb').textContent = sb;
+document.getElementById('sc').textContent = sc;
+document.getElementById('sd').textContent = sd;
