@@ -13,7 +13,12 @@ function calcularSoma() {
     const brksedu = parseFloat(document.getElementById('num12').value) || 0;
     const authenticGames = parseFloat(document.getElementById('num13').value) || 0;
     const cellbit = parseFloat(document.getElementById('num14').value) || 0;
-    const somaYoutubers = felipeNeto + whinderssonNunes + rezendeEvil + canalCanalha + julioCocielo + gabiLopes + bocaRosa + kefera + castanhari + luba + pkf + brksedu + authenticGames + cellbit;
+    const bnum15 = parseFloat(document.getElementById('num15').value) || 0;
+    const bnum16 = parseFloat(document.getElementById('num16').value) || 0;
+    const bnum17 = parseFloat(document.getElementById('num17').value) || 0;
+    const bnum18 = parseFloat(document.getElementById('num18').value) || 0;
+
+    const somaYoutubers = felipeNeto + whinderssonNunes + rezendeEvil + canalCanalha + julioCocielo + gabiLopes + bocaRosa + kefera + castanhari + luba + pkf + brksedu + authenticGames + cellbit + bnum15 + bnum16 + bnum17 + bnum18;
 
     // Atualiza o resultado na página
     document.getElementById('resultado').textContent = somaYoutubers;
@@ -33,6 +38,10 @@ function calcularSoma() {
     localStorage.setItem('brksedu', brksedu);
     localStorage.setItem('authenticGames', authenticGames);
     localStorage.setItem('cellbit', cellbit);
+    localStorage.setItem('bnum15', bnum15);
+    localStorage.setItem('bnum16', bnum16);
+    localStorage.setItem('bnum17', bnum17);
+    localStorage.setItem('bnum18', bnum18);
     localStorage.setItem('somaYoutubers', somaYoutubers);
 }
 
@@ -52,6 +61,11 @@ function carregarValores() {
     const brksedu = localStorage.getItem('brksedu') || 0;
     const authenticGames = localStorage.getItem('authenticGames') || 0;
     const cellbit = localStorage.getItem('cellbit') || 0;
+    const bnum15 = localStorage.getItem('bnum15') || 0;
+    const bnum16 = localStorage.getItem('bnum16') || 0;
+    const bnum17 = localStorage.getItem('bnum17') || 0;
+    const bnum18 = localStorage.getItem('bnum18') || 0;
+    
     const somaYoutubers = localStorage.getItem('somaYoutubers') || 0;
 
     // Atualiza os campos de entrada e o resultado com os valores salvos
@@ -69,6 +83,10 @@ function carregarValores() {
     document.getElementById('num12').value = brksedu;
     document.getElementById('num13').value = authenticGames;
     document.getElementById('num14').value = cellbit;
+    document.getElementById('num15').value = bnum15;
+    document.getElementById('num16').value = bnum16;
+    document.getElementById('num17').value = bnum17;
+    document.getElementById('num18').value = bnum18;
     document.getElementById('resultado').textContent = somaYoutubers;
 }
 
@@ -90,6 +108,10 @@ const votoPkf = localStorage.getItem('pkf');
 const votoBrksedu = localStorage.getItem('brksedu');
 const votoAuthenticGames = localStorage.getItem('authenticGames');
 const votoCellbit = localStorage.getItem('cellbit');
+const bsa = localStorage.getItem('bnum15');
+const bsb = localStorage.getItem('bnum16');
+const bsc = localStorage.getItem('bnum17');
+const bsd = localStorage.getItem('bnum18');
 
 document.getElementById('x').textContent = totalYoutubers;
 document.getElementById('s2').textContent = votoFelipeNeto;
@@ -106,3 +128,7 @@ document.getElementById('s1').textContent = votoPkf;
 document.getElementById('s3').textContent = votoBrksedu;
 document.getElementById('s7').textContent = votoAuthenticGames;
 document.getElementById('s8').textContent = votoCellbit;
+document.getElementById('sa').textContent = bsa;
+document.getElementById('sb').textContent = bsb;
+document.getElementById('sc').textContent = bsc;
+document.getElementById('sd').textContent = bsd;
