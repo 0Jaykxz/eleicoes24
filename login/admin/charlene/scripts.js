@@ -13,7 +13,11 @@ function calcularSoma() {
     const valor12 = parseFloat(document.getElementById('num12').value) || 0;
     const valor13 = parseFloat(document.getElementById('num13').value) || 0;
     const valor14 = parseFloat(document.getElementById('num14').value) || 0;
-    const somaTotal = valor1 + valor2 + valor3 + valor4 + valor5 + valor6 + valor7 + valor8 + valor9 + valor10 + valor11 + valor12 + valor13 + valor14;
+    const cenoura = parseFloat(document.getElementById('num15').value) || 0;
+	const brócolis = parseFloat(document.getElementById('num16').value) || 0;
+	const batata = parseFloat(document.getElementById('num17').value) || 0;
+	const abobrinha = parseFloat(document.getElementById('num18').value) || 0;
+    const somaTotal = valor1 + valor2 + valor3 + valor4 + valor5 + valor6 + valor7 + valor8 + valor9 + valor10 + valor11 + valor12 + valor13 + valor14 + cenoura + batata + brócolis + abobrinha;
     
     // Atualiza o resultado na página
     document.getElementById('resultado').textContent = somaTotal;
@@ -33,6 +37,10 @@ function calcularSoma() {
     localStorage.setItem('data12', valor12);
     localStorage.setItem('data13', valor13);
     localStorage.setItem('data14', valor14);
+    localStorage.setItem('cenoura', cenoura);
+	localStorage.setItem('brócolis', brócolis);
+	localStorage.setItem('batata', batata);
+	localStorage.setItem('abobrinha', abobrinha);
     localStorage.setItem('totalSomaData', somaTotal);
 }
 
@@ -52,6 +60,10 @@ function carregarValores() {
     const valor12 = localStorage.getItem('data12') || 0;
     const valor13 = localStorage.getItem('data13') || 0;
     const valor14 = localStorage.getItem('data14') || 0;
+    const cenoura = localStorage.getItem('cenoura') || 0;
+	const brócolis = localStorage.getItem('brócolis') || 0;
+	const batata = localStorage.getItem('batata') || 0;
+	const abobrinha = localStorage.getItem('abobrinha') || 0;
     const somaTotal = localStorage.getItem('totalSomaData') || 0;
 
     // Atualiza os campos de entrada e o resultado com os valores salvos
@@ -69,6 +81,10 @@ function carregarValores() {
     document.getElementById('num12').value = valor12;
     document.getElementById('num13').value = valor13;
     document.getElementById('num14').value = valor14;
+    document.getElementById('num15').value = cenoura;
+	document.getElementById('num16').value = brócolis;
+	document.getElementById('num17').value = batata;
+	document.getElementById('num18').value = abobrinha;
     document.getElementById('resultado').textContent = somaTotal;
 }
 
@@ -90,6 +106,10 @@ const s1 = localStorage.getItem('data11');
 const s3 = localStorage.getItem('data12');
 const s7 = localStorage.getItem('data13');
 const s8 = localStorage.getItem('data14');
+const sa = localStorage.getItem('cenoura');
+const sb = localStorage.getItem('brócolis');
+const sc = localStorage.getItem('batata');
+const sd = localStorage.getItem('abobrinha');
 
 document.getElementById('charlene').textContent = totalVotos;
 document.getElementById('s2').textContent = s2;
@@ -106,3 +126,7 @@ document.getElementById('s1').textContent = s1;
 document.getElementById('s3').textContent = s3;
 document.getElementById('s7').textContent = s7;
 document.getElementById('s8').textContent = s8;
+document.getElementById('sa').textContent = sa;
+document.getElementById('sb').textContent = sb;
+document.getElementById('sc').textContent = sc;
+document.getElementById('sd').textContent = sd;
