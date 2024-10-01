@@ -13,7 +13,11 @@ function calcularSoma() {
     const yuki = parseFloat(document.getElementById('num12').value) || 0; // 雪 "Neve"
     const kaze = parseFloat(document.getElementById('num13').value) || 0; // 風 "Vento"
     const hoshi = parseFloat(document.getElementById('num14').value) || 0; // 星 "Estrela"
-    const somaKanjis = ai + hikari + yume + ki + saki + umi + sora + hana + tsuki + hi + mizu + yuki + kaze + hoshi;
+    const brigadeiro = parseFloat(document.getElementById('num15').value) || 0;
+	const beijinho = parseFloat(document.getElementById('num16').value) || 0;
+	const quindim = parseFloat(document.getElementById('num17').value) || 0;
+	const pudim = parseFloat(document.getElementById('num18').value) || 0;
+    const somaKanjis = ai + hikari + yume + ki + saki + umi + sora + hana + tsuki + hi + mizu + yuki + kaze + hoshi + brigadeiro + beijinho + quindim + pudim;
     
     // Atualiza o resultado na página
     document.getElementById('resultado').textContent = somaKanjis;
@@ -34,6 +38,10 @@ function calcularSoma() {
     localStorage.setItem('kaze', kaze);
     localStorage.setItem('hoshi', hoshi);
     localStorage.setItem('somaKanjis', somaKanjis);
+    localStorage.setItem('brigadeiro', brigadeiro);
+	localStorage.setItem('beijinho', beijinho);
+	localStorage.setItem('quindim', quindim);
+	localStorage.setItem('pudim', pudim);
 }
 
 function carregarValores() {
@@ -52,6 +60,10 @@ function carregarValores() {
     const yuki = localStorage.getItem('yuki') || 0;
     const kaze = localStorage.getItem('kaze') || 0;
     const hoshi = localStorage.getItem('hoshi') || 0;
+    const brigadeiro = localStorage.getItem('brigadeiro') || 0;
+	const beijinho = localStorage.getItem('beijinho') || 0;
+	const quindim = localStorage.getItem('quindim') || 0;
+	const pudim = localStorage.getItem('pudim') || 0;
     const somaKanjis = localStorage.getItem('somaKanjis') || 0;
 
     // Atualiza os campos de entrada e o resultado com os valores salvos
@@ -69,6 +81,10 @@ function carregarValores() {
     document.getElementById('num12').value = yuki;
     document.getElementById('num13').value = kaze;
     document.getElementById('num14').value = hoshi;
+    document.getElementById('num15').value = brigadeiro;
+	document.getElementById('num16').value = beijinho;
+	document.getElementById('num17').value = quindim;
+	document.getElementById('num18').value = pudim;
     document.getElementById('resultado').textContent = somaKanjis;
 }
 
@@ -90,6 +106,10 @@ const votoMizu = localStorage.getItem('mizu');
 const votoYuki = localStorage.getItem('yuki');
 const votoKaze = localStorage.getItem('kaze');
 const votoHoshi = localStorage.getItem('hoshi');
+const sa = localStorage.getItem('brigadeiro');
+const sb = localStorage.getItem('beijinho');
+const sc = localStorage.getItem('quindim');
+const sd = localStorage.getItem('pudim');
 
 document.getElementById('x').textContent = totalKanjis;
 document.getElementById('s2').textContent = votoAi;
@@ -106,3 +126,8 @@ document.getElementById('s1').textContent = votoMizu;
 document.getElementById('s3').textContent = votoYuki;
 document.getElementById('s7').textContent = votoKaze;
 document.getElementById('s8').textContent = votoHoshi;
+document.getElementById('sa').textContent = sa;
+document.getElementById('sb').textContent = sb;
+document.getElementById('sc').textContent = sc;
+document.getElementById('sd').textContent = sd;
+
