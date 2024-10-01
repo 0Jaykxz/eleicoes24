@@ -13,7 +13,11 @@ function calcularSoma() {
     const fox = parseFloat(document.getElementById('num12').value) || 0;
     const pikachu = parseFloat(document.getElementById('num13').value) || 0;
     const jigglypuff = parseFloat(document.getElementById('num14').value) || 0;
-    const somaPersonagens = mario + luigi + peach + bowser + yoshi + toad + donkeyKong + link + zelda + samus + kirby + fox + pikachu + jigglypuff;
+    const dnum15 = parseFloat(document.getElementById('num15').value) || 0;
+    const dnum16 = parseFloat(document.getElementById('num16').value) || 0;
+    const dnum17 = parseFloat(document.getElementById('num17').value) || 0;
+    const dnum18 = parseFloat(document.getElementById('num18').value) || 0;
+    const somaPersonagens = mario + luigi + peach + bowser + yoshi + toad + donkeyKong + link + zelda + samus + kirby + fox + pikachu + jigglypuff + dnum15 + dnum16 + dnum17 + dnum18;
 
     // Atualiza o resultado na página
     document.getElementById('resultado').textContent = somaPersonagens;
@@ -33,6 +37,10 @@ function calcularSoma() {
     localStorage.setItem('fox', fox);
     localStorage.setItem('pikachu', pikachu);
     localStorage.setItem('jigglypuff', jigglypuff);
+    localStorage.setItem('dnum15', dnum15);
+    localStorage.setItem('dnum16', dnum16);
+    localStorage.setItem('dnum17', dnum17);
+    localStorage.setItem('dnum18', dnum18);
     localStorage.setItem('somaPersonagens', somaPersonagens);
 }
 
@@ -53,6 +61,10 @@ function carregarValores() {
     const pikachu = localStorage.getItem('pikachu') || 0;
     const jigglypuff = localStorage.getItem('jigglypuff') || 0;
     const somaPersonagens = localStorage.getItem('somaPersonagens') || 0;
+    const dnum15 = localStorage.getItem('dnum15') || 0;
+    const dnum16 = localStorage.getItem('dnum16') || 0;
+    const dnum17 = localStorage.getItem('dnum17') || 0;
+    const dnum18 = localStorage.getItem('dnum18') || 0;
 
     // Atualiza os campos de entrada e o resultado com os valores salvos
     document.getElementById('num1').value = mario;
@@ -69,6 +81,10 @@ function carregarValores() {
     document.getElementById('num12').value = fox;
     document.getElementById('num13').value = pikachu;
     document.getElementById('num14').value = jigglypuff;
+    document.getElementById('num15').value = dnum15;
+    document.getElementById('num16').value = dnum16;
+    document.getElementById('num17').value = dnum17;
+    document.getElementById('num18').value = dnum18;
     document.getElementById('resultado').textContent = somaPersonagens;
 }
 
@@ -90,6 +106,10 @@ const votoKirby = localStorage.getItem('kirby');
 const votoFox = localStorage.getItem('fox');
 const votoPikachu = localStorage.getItem('pikachu');
 const votoJigglypuff = localStorage.getItem('jigglypuff');
+const dsa = localStorage.getItem('dnum15');
+const dsb = localStorage.getItem('dnum16');
+const dsc = localStorage.getItem('dnum17');
+const dsd = localStorage.getItem('dnum18');
 
 document.getElementById('x').textContent = totalPersonagens;
 document.getElementById('s2').textContent = votoMario;
@@ -106,3 +126,7 @@ document.getElementById('s1').textContent = votoKirby;
 document.getElementById('s3').textContent = votoFox;
 document.getElementById('s7').textContent = votoPikachu;
 document.getElementById('s8').textContent = votoJigglypuff;
+document.getElementById('sa').textContent = dsa;
+document.getElementById('sb').textContent = dsb;
+document.getElementById('sc').textContent = dsc;
+document.getElementById('sd').textContent = dsd;
