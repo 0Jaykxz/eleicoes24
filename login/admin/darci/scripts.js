@@ -13,7 +13,11 @@ function calcularSoma() {
     const beleza = parseFloat(document.getElementById('num12').value) || 0;
     const confiança = parseFloat(document.getElementById('num13').value) || 0;
     const criatividade = parseFloat(document.getElementById('num14').value) || 0;
-    const somaBarbie = glamour + fashion + amizade + estilo + aventura + elegancia + brilho + sorriso + alegria + sonho + inspiracao + beleza + confiança + criatividade;
+    const futebol = parseFloat(document.getElementById('num15').value) || 0;
+	const basquete = parseFloat(document.getElementById('num16').value) || 0;
+	const natacao = parseFloat(document.getElementById('num17').value) || 0;
+	const tennis = parseFloat(document.getElementById('num18').value) || 0;
+    const somaBarbie = glamour + fashion + amizade + estilo + aventura + elegancia + brilho + sorriso + alegria + sonho + inspiracao + beleza + confiança + criatividade + futebol + basquete + natacao + tennis;
     
     // Atualiza o resultado na página
     document.getElementById('resultado').textContent = somaBarbie;
@@ -33,6 +37,10 @@ function calcularSoma() {
     localStorage.setItem('beleza', beleza);
     localStorage.setItem('confiança', confiança);
     localStorage.setItem('criatividade', criatividade);
+    localStorage.setItem('futebol', futebol);
+	localStorage.setItem('basquete', basquete);
+	localStorage.setItem('natacao', natacao);
+	localStorage.setItem('tennis', tennis);
     localStorage.setItem('somaBarbie', somaBarbie);
 }
 
@@ -52,6 +60,10 @@ function carregarValores() {
     const beleza = localStorage.getItem('beleza') || 0;
     const confiança = localStorage.getItem('confiança') || 0;
     const criatividade = localStorage.getItem('criatividade') || 0;
+    const futebol = localStorage.getItem('futebol') || 0;
+	const basquete = localStorage.getItem('basquete') || 0;
+	const natacao = localStorage.getItem('natacao') || 0;
+	const tennis = localStorage.getItem('tennis') || 0;
     const somaBarbie = localStorage.getItem('somaBarbie') || 0;
 
     // Atualiza os campos de entrada e o resultado com os valores salvos
@@ -69,6 +81,10 @@ function carregarValores() {
     document.getElementById('num12').value = beleza;
     document.getElementById('num13').value = confiança;
     document.getElementById('num14').value = criatividade;
+    document.getElementById('num15').value = futebol;
+	document.getElementById('num16').value = basquete;
+	document.getElementById('num17').value = natacao;
+	document.getElementById('num18').value = tennis;
     document.getElementById('resultado').textContent = somaBarbie;
 }
 
@@ -90,6 +106,10 @@ const votoInspiracao = localStorage.getItem('inspiracao');
 const votoBeleza = localStorage.getItem('beleza');
 const votoConfianca = localStorage.getItem('confiança');
 const votoCriatividade = localStorage.getItem('criatividade');
+const sa = localStorage.getItem('futebol');
+const sb = localStorage.getItem('basquete');
+const sc = localStorage.getItem('natacao');
+const sd = localStorage.getItem('tennis');
 
 document.getElementById('x').textContent = totalBarbie;
 document.getElementById('s2').textContent = votoGlamour;
@@ -106,3 +126,7 @@ document.getElementById('s1').textContent = votoInspiracao;
 document.getElementById('s3').textContent = votoBeleza;
 document.getElementById('s7').textContent = votoConfianca;
 document.getElementById('s8').textContent = votoCriatividade;
+document.getElementById('sa').textContent = sa;
+document.getElementById('sb').textContent = sb;
+document.getElementById('sc').textContent = sc;
+document.getElementById('sd').textContent = sd;
