@@ -13,7 +13,11 @@ function calcularSoma() {
     const lelouch = parseFloat(document.getElementById('num12').value) || 0;
     const kirito = parseFloat(document.getElementById('num13').value) || 0;
     const asuna = parseFloat(document.getElementById('num14').value) || 0;
-    const somaAnimes = naruto + goku + luffy + ichigo + saitama + midoriya + eren + lightYagami + sakura + tanjiro + edwardElric + lelouch + kirito + asuna;
+    const cnum15 = parseFloat(document.getElementById('num15').value) || 0;
+    const cnum16 = parseFloat(document.getElementById('num16').value) || 0;
+    const cnum17 = parseFloat(document.getElementById('num17').value) || 0;
+    const cnum18 = parseFloat(document.getElementById('num18').value) || 0;
+    const somaAnimes = naruto + goku + luffy + ichigo + saitama + midoriya + eren + lightYagami + sakura + tanjiro + edwardElric + lelouch + kirito + asuna + cnum15 + cnum16 + cnum17 + cnum18;
 
     // Atualiza o resultado na página
     document.getElementById('resultado').textContent = somaAnimes;
@@ -33,6 +37,10 @@ function calcularSoma() {
     localStorage.setItem('lelouch', lelouch);
     localStorage.setItem('kirito', kirito);
     localStorage.setItem('asuna', asuna);
+    localStorage.setItem('cnum15', cnum15);
+    localStorage.setItem('cnum16', cnum16);
+    localStorage.setItem('cnum17', cnum17);
+    localStorage.setItem('cnum18', cnum18);
     localStorage.setItem('somaAnimes', somaAnimes);
 }
 
@@ -52,6 +60,10 @@ function carregarValores() {
     const lelouch = localStorage.getItem('lelouch') || 0;
     const kirito = localStorage.getItem('kirito') || 0;
     const asuna = localStorage.getItem('asuna') || 0;
+    const cnum15 = localStorage.getItem('cnum15') || 0;
+    const cnum16 = localStorage.getItem('cnum16') || 0;
+    const cnum17 = localStorage.getItem('cnum17') || 0;
+    const cnum18 = localStorage.getItem('cnum18') || 0;
     const somaAnimes = localStorage.getItem('somaAnimes') || 0;
 
     // Atualiza os campos de entrada e o resultado com os valores salvos
@@ -69,6 +81,11 @@ function carregarValores() {
     document.getElementById('num12').value = lelouch;
     document.getElementById('num13').value = kirito;
     document.getElementById('num14').value = asuna;
+    document.getElementById('num15').value = cnum15;
+    document.getElementById('num16').value = cnum16;
+    document.getElementById('num17').value = cnum17;
+    document.getElementById('num18').value = cnum18;
+    
     document.getElementById('resultado').textContent = somaAnimes;
 }
 
@@ -90,6 +107,10 @@ const votoEdwardElric = localStorage.getItem('edwardElric');
 const votoLelouch = localStorage.getItem('lelouch');
 const votoKirito = localStorage.getItem('kirito');
 const votoAsuna = localStorage.getItem('asuna');
+const csa = localStorage.getItem('cnum15');
+const csb = localStorage.getItem('cnum16');
+const csc = localStorage.getItem('cnum17');
+const csd = localStorage.getItem('cnum18');
 
 document.getElementById('x').textContent = totalAnimes;
 document.getElementById('s2').textContent = votoNaruto;
@@ -106,3 +127,7 @@ document.getElementById('s1').textContent = votoEdwardElric;
 document.getElementById('s3').textContent = votoLelouch;
 document.getElementById('s7').textContent = votoKirito;
 document.getElementById('s8').textContent = votoAsuna;
+document.getElementById('sa').textContent = csa;
+document.getElementById('sb').textContent = csb;
+document.getElementById('sc').textContent = csc;
+document.getElementById('sd').textContent = csd;
