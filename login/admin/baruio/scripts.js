@@ -13,7 +13,11 @@ function calcularSoma() {
     const valorO = parseFloat(document.getElementById('num12').value) || 0;
     const valorN = parseFloat(document.getElementById('num13').value) || 0;
     const valorM = parseFloat(document.getElementById('num14').value) || 0;
-    const abacate = valorX + valorY + valorZ + valorW + valorV + valorU + valorT + valorS + valorR + valorQ + valorP + valorO + valorN + valorM;
+    const macaConst = parseFloat(document.getElementById('num15').value) || 0;
+    const bananaConst = parseFloat(document.getElementById('num16').value) || 0;
+    const laranjaConst = parseFloat(document.getElementById('num17').value) || 0;
+    const uvaConst = parseFloat(document.getElementById('num18').value) || 0;
+    const abacate = valorX + valorY + valorZ + valorW + valorV + valorU + valorT + valorS + valorR + valorQ + valorP + valorO + valorN + valorM + macaConst + bananaConst + laranjaConst + uvaConst;
     
     // Atualiza o resultado na página
     document.getElementById('resultado').textContent = abacate;
@@ -33,6 +37,10 @@ function calcularSoma() {
     localStorage.setItem('valorO', valorO);
     localStorage.setItem('valorN', valorN);
     localStorage.setItem('valorM', valorM);
+    localStorage.setItem('maca', macaConst);
+    localStorage.setItem('banana', bananaConst);
+    localStorage.setItem('laranja', laranjaConst);
+    localStorage.setItem('uva', uvaConst);
     localStorage.setItem('abacate', abacate);
 }
 
@@ -52,6 +60,10 @@ function carregarValores() {
     const valorO = localStorage.getItem('valorO') || 0;
     const valorN = localStorage.getItem('valorN') || 0;
     const valorM = localStorage.getItem('valorM') || 0;
+    const macaConst = localStorage.getItem('maca') || 0;
+    const bananaConst = localStorage.getItem('banana') || 0;
+    const laranjaConst = localStorage.getItem('laranja') || 0;
+    const uvaConst = localStorage.getItem('uva') || 0;
     const abacate = localStorage.getItem('abacate') || 0;
 
     // Atualiza os campos de entrada e o resultado com os valores salvos
@@ -69,6 +81,10 @@ function carregarValores() {
     document.getElementById('num12').value = valorO;
     document.getElementById('num13').value = valorN;
     document.getElementById('num14').value = valorM;
+    document.getElementById('num15').value = macaConst;
+    document.getElementById('num16').value = bananaConst;
+    document.getElementById('num17').value = laranjaConst;
+    document.getElementById('num18').value = uvaConst;
     document.getElementById('resultado').textContent = abacate;
 }
 
@@ -90,6 +106,11 @@ const alternativaP = localStorage.getItem('valorP');
 const alternativaO = localStorage.getItem('valorO');
 const alternativaN = localStorage.getItem('valorN');
 const alternativaM = localStorage.getItem('valorM');
+const frutaSa = localStorage.getItem('maca');
+const frutaSb = localStorage.getItem('banana');
+const frutaSc = localStorage.getItem('laranja');
+const frutaSd = localStorage.getItem('uva');
+
 
 document.getElementById('x').textContent = votosFinal;
 document.getElementById('s2').textContent = alternativaX;
@@ -106,3 +127,7 @@ document.getElementById('s1').textContent = alternativaP;
 document.getElementById('s3').textContent = alternativaO;
 document.getElementById('s7').textContent = alternativaN;
 document.getElementById('s8').textContent = alternativaM;
+document.getElementById('sa').textContent = frutaSa;
+document.getElementById('sb').textContent = frutaSb;
+document.getElementById('sc').textContent = frutaSc;
+document.getElementById('sd').textContent = frutaSd;
