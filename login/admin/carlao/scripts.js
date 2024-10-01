@@ -13,7 +13,11 @@ function calcularSoma() {
     const valor12 = parseFloat(document.getElementById('num12').value) || 0;
     const valor13 = parseFloat(document.getElementById('num13').value) || 0;
     const valor14 = parseFloat(document.getElementById('num14').value) || 0;
-    const somaTotal = valor1 + valor2 + valor3 + valor4 + valor5 + valor6 + valor7 + valor8 + valor9 + valor10 + valor11 + valor12 + valor13 + valor14;
+    const gouda = parseFloat(document.getElementById('num15').value) || 0;
+	const cheddar = parseFloat(document.getElementById('num16').value) || 0;
+	const brie = parseFloat(document.getElementById('num17').value) || 0;
+	const parmesão = parseFloat(document.getElementById('num18').value) || 0;
+    const somaTotal = valor1 + valor2 + valor3 + valor4 + valor5 + valor6 + valor7 + valor8 + valor9 + valor10 + valor11 + valor12 + valor13 + valor14 + gouda + cheddar + brie + parmesão;
     
     // Atualiza o resultado na página
     document.getElementById('resultado').textContent = somaTotal;
@@ -33,6 +37,10 @@ function calcularSoma() {
     localStorage.setItem('novoValor12', valor12);
     localStorage.setItem('novoValor13', valor13);
     localStorage.setItem('novoValor14', valor14);
+    localStorage.setItem('gouda', gouda);
+	localStorage.setItem('cheddar', cheddar);
+	localStorage.setItem('brie', brie);
+	localStorage.setItem('parmesão', parmesão);
     localStorage.setItem('novaSomaTotal', somaTotal);
 }
 
@@ -52,6 +60,10 @@ function carregarValores() {
     const valor12 = localStorage.getItem('novoValor12') || 0;
     const valor13 = localStorage.getItem('novoValor13') || 0;
     const valor14 = localStorage.getItem('novoValor14') || 0;
+    const gouda = localStorage.getItem('gouda') || 0;
+	const cheddar = localStorage.getItem('cheddar') || 0;
+	const brie = localStorage.getItem('brie') || 0;
+	const parmesão = localStorage.getItem('parmesão') || 0;
     const somaTotal = localStorage.getItem('novaSomaTotal') || 0;
 
     // Atualiza os campos de entrada e o resultado com os valores salvos
@@ -69,6 +81,10 @@ function carregarValores() {
     document.getElementById('num12').value = valor12;
     document.getElementById('num13').value = valor13;
     document.getElementById('num14').value = valor14;
+    document.getElementById('num15').value = gouda;
+	document.getElementById('num16').value = cheddar;
+	document.getElementById('num17').value = brie;
+	document.getElementById('num18').value = parmesão;
     document.getElementById('resultado').textContent = somaTotal;
 }
 
@@ -90,6 +106,10 @@ const s1 = localStorage.getItem('novoValor11');
 const s3 = localStorage.getItem('novoValor12');
 const s7 = localStorage.getItem('novoValor13');
 const s8 = localStorage.getItem('novoValor14');
+const sa = localStorage.getItem('gouda');
+const sb = localStorage.getItem('cheddar');
+const sc = localStorage.getItem('brie');
+const sd = localStorage.getItem('parmesão');
 
 document.getElementById('carlao').textContent = totalVotos;
 document.getElementById('s2').textContent = s2;
@@ -106,3 +126,7 @@ document.getElementById('s1').textContent = s1;
 document.getElementById('s3').textContent = s3;
 document.getElementById('s7').textContent = s7;
 document.getElementById('s8').textContent = s8;
+document.getElementById('sa').textContent = sa;
+document.getElementById('sb').textContent = sb;
+document.getElementById('sc').textContent = sc;
+document.getElementById('sd').textContent = sd;
